@@ -39,7 +39,7 @@ Welcome to my Baccarat Program! This is an enhanced and upgraded version of a Pr
 ## Usage example
 
 ## Screenshots
-- [Add screenshots to show Baccarat game in action.]
+- [Need ti add screenshots to show Baccarat game in action...]
 
 ## Disclaimer
 - If the images folder is not added to src, no card images will be shown.
