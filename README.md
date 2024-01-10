@@ -36,11 +36,6 @@ Welcome to my Baccarat Program! This is an enhanced and upgraded version of a Pr
 
 ## How to Play
 
-## Usage example
-
-## Screenshots
-- [Need ti add screenshots to show Baccarat game in action...]
-
 ## Disclaimer
 - If the images folder is not added to src, no card images will be shown.
 
