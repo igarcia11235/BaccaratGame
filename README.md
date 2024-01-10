@@ -31,12 +31,14 @@ Welcome to my Baccarat Program! This is an enhanced and upgraded version of a Pr
     ```
 5. Run the application.
 
-## Rules
-- Here is a simple [guide](https://fallsviewcasinoresort.com/content/dam/fallsview/PDF/Playing/FCR-BaccaratGuide.pdf) on how to play Baccarat
+
+
+
 
 ## How to Play
+Here is a simple [guide](https://fallsviewcasinoresort.com/content/dam/fallsview/PDF/Playing/FCR-BaccaratGuide.pdf) on how to play Baccarat
 
 ## Disclaimer
-- If the images folder is not added to src, no card images will be shown.
+If the images folder is not added to src, no card images will be shown.
 
 For any questions or feedback, feel free to reach out to me at igarcia11235@gmail.com.
