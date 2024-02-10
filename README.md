@@ -19,6 +19,9 @@ Baccarat program created using JavaFX
 
 Welcome to my Baccarat Program! This is an enhanced and upgraded version of a Project I did in my Software Design course. It includes a visually appealing UI and a turn-by-turn interactive element when facing the computer. This game was developed in Java using JavaFX. The game follows traditional Baccarat rules.
 
+## How to Play
+Here is a simple [guide](https://fallsviewcasinoresort.com/content/dam/fallsview/PDF/Playing/FCR-BaccaratGuide.pdf) on how to play Baccarat
+
 ## Installation
 1. Clone the repository.
 2. Open the Maven Project in your preferred IDE supporting Java.
@@ -30,13 +33,6 @@ Welcome to my Baccarat Program! This is an enhanced and upgraded version of a Pr
     mvn exec:java
     ```
 5. Run the application.
-
-
-
-
-
-## How to Play
-Here is a simple [guide](https://fallsviewcasinoresort.com/content/dam/fallsview/PDF/Playing/FCR-BaccaratGuide.pdf) on how to play Baccarat
 
 ## Disclaimer
 If the images folder is not added to src, no card images will be shown.
