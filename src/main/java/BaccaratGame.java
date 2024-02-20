@@ -33,7 +33,7 @@ public class BaccaratGame extends Application {
         Scene scene = new Scene(root, 700, 700);
         primaryStage.setScene(scene);
 
-        // Create GUI elements
+        // Create UI elements
         VBox displayArea = new VBox(10);
         displayArea.setPadding(new Insets(10));
         TextArea resultsArea = new TextArea();
@@ -56,8 +56,8 @@ public class BaccaratGame extends Application {
         // Create a MenuBar with an "Options" menu
         MenuBar menuBar = new MenuBar();
         Menu optionsMenu = new Menu("Options");
-        MenuItem exitItem = new MenuItem("Exit");
-        MenuItem freshStartItem = new MenuItem("Fresh Start");
+        MenuItem exitItem = new MenuItem("Exit Game");
+        MenuItem freshStartItem = new MenuItem("Restart Game");
         optionsMenu.getItems().addAll(exitItem, freshStartItem);
         menuBar.getMenus().add(optionsMenu);
         root.setTop(menuBar);
@@ -68,7 +68,7 @@ public class BaccaratGame extends Application {
         playerHand = new ArrayList<>();
         bankerHand = new ArrayList<>();
 
-        // Initialize labels to display player's and banker's cards
+        // Initialize labels to display player's and banker's cards (These just showcase where the cards will be displayed)
         playerCardLabel = new Label("Player's Cards: ");
         bankerCardLabel = new Label("Banker's Cards: ");
         VBox cardLabels = new VBox(playerCardLabel, bankerCardLabel);
@@ -84,7 +84,7 @@ public class BaccaratGame extends Application {
                 bankerHand = theDealer.dealHand(); // Deal the banker's hand
 
                 // Clear the labels for the previous round
-                playerCardLabel.setText("Player's Cards: ");
+                playerCardLabel.setText("Player's Cards:  ");
                 bankerCardLabel.setText("Banker's Cards: ");
 
                 // Evaluate the winner, considering natural wins
@@ -166,7 +166,7 @@ public class BaccaratGame extends Application {
             resultsArea.clear(); // Clear the results area
             playerHand.clear(); // Clear player's hand
             bankerHand.clear(); // Clear banker's hand
-            playerCardLabel.setText("Player's Cards: ");
+            playerCardLabel.setText("Player's Cards:       ");
             bankerCardLabel.setText("Banker's Cards: ");
         });
 
@@ -200,27 +200,21 @@ public class BaccaratGame extends Application {
     }
 
     // Helper method to display all the cards in a hand
-    /*private void displayHand(ArrayList<Card> hand, Label label) {
-        StringBuilder cardsText = new StringBuilder(label.getText() + " ");
-        for (Card card : hand) {
-            cardsText.append(card.toString()).append(" ");
-        }
-        label.setText(cardsText.toString());
-    }*/
-
     private void displayHand(ArrayList<Card> hand, Label label) {
-        HBox cardImages = new HBox(); // Create an HBox to hold card images
+        HBox cardContainer = new HBox(); // Create a horizontal box to contain the card images
+        cardContainer.getChildren().add(new Label(label.getText())); // Add the label to the container
+    
+        label.setText(null); // Clear the label's text (This prevents the label text apearing AFTER the card images)
 
         for (Card card : hand) {
-            // Load the image for the card
-            ImageView cardImageView = new ImageView(new Image("file:///images/" + card.toString() + ".png"));
-            cardImageView.setFitHeight(150); // Set the height of the image
-            cardImageView.setFitWidth(100); // Set the width of the image
-
-            cardImages.getChildren().add(cardImageView); // Add the image to the HBox
+            Image cardImage = new Image("file:src/images/" + card.toString() + ".png");
+            ImageView cardImageView = new ImageView(cardImage);
+            cardImageView.setFitHeight(100); // Adjust the height of the card image
+            cardImageView.setPreserveRatio(true); // Preserve the aspect ratio of the card image
+            cardContainer.getChildren().add(cardImageView); // Add the ImageView to the container
         }
-
-        label.setGraphic(cardImages); // Set the HBox containing images as the graphic of the label
+    
+        label.setGraphic(cardContainer); // Set the container as the graphic for the label
     }
-
+    
 }
